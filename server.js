@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 corsProxy.createServer({
     //originWhitelist: ['http://localhost:3000', 'https://pppppppppppproxy.herokuapp.com'],
     //requireHeader: ['origin', 'x-requested-with'],
-    removeHeaders: ['cookie', 'cookie2']
+    removeHeaders: ['cookie', 'cookie2','X-Frame-Options']
 }).listen(port, host, () => {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
