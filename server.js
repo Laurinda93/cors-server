@@ -9,7 +9,7 @@ corsProxy.createServer({
     //originWhitelist: ['http://localhost:3000', 'https://pppppppppppproxy.herokuapp.com'],
     //requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2'],
-    setHeaders: {"X-Frame-Options": "ALLOWALL"}
+    setHeaders: {"x-frame-options": "ALLOWALL"}
 }).listen(port, host, () => {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
 });
